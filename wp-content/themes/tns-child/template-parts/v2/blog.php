@@ -15,7 +15,7 @@ if ($loop->have_posts()): ?>
 
 	<section class="blog-wrapper-v2">
 		<div class="container">
-			<h2 class="section-title"><?= $blog['_title'] ?></h2>
+			<h2 class="section-title">Thông tin cần biết</h2>
 			<div class="row">
 				<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 					<div class="col-lg-3 col-md-6">

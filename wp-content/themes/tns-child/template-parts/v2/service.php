@@ -29,6 +29,21 @@ if ($loop->have_posts()): ?>
 				wp_reset_postdata(); ?>
 			</div>
 		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="section-title">Quản tài viên & quản lý, thanh lý tài sản</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+					<div class="col-lg-3 col-md-6">
+						<?php get_template_part('template-parts/content/content-5'); ?>
+					</div>
+				<?php endwhile;
+				wp_reset_postdata(); ?>
+			</div>
+		</div>
 	</section>
 
 <?php endif;

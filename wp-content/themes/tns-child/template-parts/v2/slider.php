@@ -16,7 +16,7 @@ if ($slider['_slider']): ?>
 				<?php endforeach; ?>
 			</div>
 		</div>
-		<div class="primary-slider-content-wrapper">
+		<!-- <div class="primary-slider-content-wrapper">
 			<div class="container">
 				<div class="primary-slider-content">
 					<div class="logo-wrapper">
@@ -36,6 +36,6 @@ if ($slider['_slider']): ?>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</section>
 <?php endif;
