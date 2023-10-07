@@ -1,0 +1,30 @@
+.service-wrapper-v2 {
+	background-color: #EFF2F5;
+	padding: 60px 0;
+
+	.section-title {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: #292C2E;
+		position: relative;
+		padding-top: 53px;
+		margin-bottom: 54px;
+		@include responsive(575) {
+			font-size: 25px;
+		}
+
+		&:before {
+			content: '';
+			width: 1px;
+			height: 35px;
+			display: block;
+			background-color: #FF0B0B;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			@include transform(translateX(-50%));
+		}
+	}
+}

@@ -1,0 +1,389 @@
+.content-post {
+	&:hover {
+		.featured-media {
+			.featured-media-inner {
+				img {
+					@include transform(scale(1.5));
+				}
+			}
+		}
+	}
+
+	.featured-media {
+		position: relative;
+
+		.entry-date {
+			position: absolute;
+			z-index: 10;
+			display: block;
+			width: 89px;
+			bottom: -36px;
+			right: 18px;
+
+			span {
+				display: block;
+				text-align: center;
+				font-weight: 900;
+				font-family: $secondary-font;
+
+				&:first-child {
+					line-height: 46px;
+					background-color: #fff;
+					color: #FF0B0B;
+					font-size: 24px;
+					border-radius: 5px 5px 0 0;
+				}
+
+				&:last-child {
+					line-height: 36px;
+					background-color: #FF0B0B;
+					color: #fff;
+					font-size: 15px;
+					border-radius: 0 0 5px 5px;
+				}
+			}
+		}
+
+		.featured-media-inner {
+			border-radius: 5px;
+			overflow: hidden;
+			width: 100%;
+			height: 418px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include transition(1s all);
+			}
+		}
+	}
+
+	.post-inner {
+		padding-top: 18px;
+
+		.post-author {
+			position: relative;
+			padding-left: 28px;
+			font-size: 17px;
+			font-weight: 300;
+			color: #787878;
+			margin-bottom: 15px;
+			padding-right: 100px;
+
+			&:before {
+				content: '';
+				background-image: url("../images/user.png");
+				width: 17px;
+				height: 17px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+		}
+
+		.entry-title {
+			@include textWithEllipsis(20, 1.4, 2);
+			font-weight: 700;
+			color: #04000B;
+
+			&:hover {
+				color: #FF0B0B;
+			}
+
+			a {
+				display: inline-block;
+				color: inherit;
+			}
+		}
+	}
+}
+
+.content-post-2 {
+	background-color: #fff;
+	border-radius: 16px;
+	margin-bottom: 40px;
+
+	&:hover {
+		.featured-media {
+			.featured-media-inner {
+				img {
+					@include transform(scale(1.5));
+				}
+			}
+		}
+	}
+
+	.featured-media {
+		position: relative;
+
+		.entry-date {
+			position: absolute;
+			z-index: 10;
+			display: block;
+			width: 89px;
+			bottom: -36px;
+			right: 65px;
+			@include responsive(575) {
+				right: 18px;
+			}
+
+			span {
+				display: block;
+				text-align: center;
+				font-weight: 900;
+				font-family: $secondary-font;
+
+				&:first-child {
+					line-height: 46px;
+					background-color: #fff;
+					color: #FF0B0B;
+					font-size: 24px;
+					border-radius: 5px 5px 0 0;
+				}
+
+				&:last-child {
+					line-height: 36px;
+					background-color: #FF0B0B;
+					color: #fff;
+					font-size: 15px;
+					border-radius: 0 0 5px 5px;
+				}
+			}
+		}
+
+		.featured-media-inner {
+			overflow: hidden;
+			border-radius: 16px 16px 0 0;
+			position: relative;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				width: 100%;
+				height: auto;
+				@include transition(1s all);
+				border-radius: 16px 16px 0 0;
+			}
+		}
+	}
+
+	.post-inner {
+		border-radius: 0 0 16px 16px;
+		padding: 35px 66px;
+		border-right: 1px solid #D7D7D7;
+		border-left: 1px solid #D7D7D7;
+		border-bottom: 1px solid #D7D7D7;
+		@include responsive(575) {
+			padding: 35px 30px;
+		}
+
+		.post-author {
+			position: relative;
+			padding-left: 28px;
+			font-size: 17px;
+			font-weight: 300;
+			color: #787878;
+			margin-bottom: 15px;
+			padding-right: 100px;
+
+			&:before {
+				content: '';
+				background-image: url("../images/user.png");
+				width: 17px;
+				height: 17px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+		}
+
+		.entry-title {
+			@include textWithEllipsis(20, 1.4, 2);
+			font-weight: 700;
+			color: #04000B;
+
+			&:hover {
+				color: #FF0B0B;
+			}
+
+			a {
+				display: inline-block;
+				color: inherit;
+			}
+		}
+
+		.post-excerpt {
+			margin-bottom: 25px;
+			@include textWithEllipsis(17, 1.4, 4);
+			color: #787878;
+
+			p {
+				margin-bottom: 15px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.post-link {
+			display: inline-block;
+			font-size: 17px;
+			font-weight: 700;
+			color: #fff;
+			background-color: #FF0B0B;
+			text-align: center;
+			line-height: 58px;
+			padding: 0 25px;
+			border-radius: 100px;
+			min-width: 192px;
+			@include responsive(575) {
+				line-height: 45px;
+				min-width: 150px;
+			}
+
+			&:hover {
+				background-color: #d30a0a;
+			}
+		}
+	}
+}
+
+.content-post-3 {
+	@include flexbox();
+	@include flex-wrap(wrap);
+	margin-bottom: 24px;
+
+	.featured-media {
+		@include flex-basis(91px);
+		max-width: 91px;
+
+		.featured-media-inner {
+			border-radius: 10px;
+			overflow: hidden;
+			position: relative;
+			padding-bottom: 100%;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include transition(1s all);
+			}
+		}
+	}
+
+	.post-inner {
+		@include flex-basis(calc(100% - 91px));
+		max-width: calc(100% - 91px);
+		padding-left: 20px;
+
+		.entry-date {
+			font-size: 15px;
+			font-weight: 300;
+			color: #787878;
+		}
+
+		.entry-title {
+			@include textWithEllipsis(18, 1.4, 2);
+			color: #04000B;
+			font-weight: 700;
+
+			&:hover {
+				color: #FF0B0B;
+			}
+
+			a {
+				display: inline-block;
+				color: inherit;
+			}
+		}
+	}
+}
+
+.content-post-4 {
+	margin-bottom: 24px;
+	background-color: #fff;
+
+	&:hover {
+		background-color: #FF0B0B;
+
+		.featured-media {
+			.featured-media-inner {
+				img {
+					@include transform(scale(1.5));
+				}
+			}
+		}
+
+		.post-inner {
+			background-color: #FF0B0B;
+
+			.cat-name {
+				background-color: #fff;
+				color: #292C2E;
+			}
+
+			.entry-title {
+				color: #fff;
+			}
+		}
+	}
+
+	.featured-media {
+		.featured-media-inner {
+			padding-bottom: 86.85897435897435%;
+			position: relative;
+			overflow: hidden;
+			border-radius: 5px;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include transition(1s all);
+			}
+		}
+	}
+
+	.post-inner {
+		background-color: #fff;
+		border-radius: 0 0 5px 5px;
+		padding: 18px 19px 23px 19px;
+
+		.cat-name {
+			display: inline-block;
+			font-size: 17px;
+			font-weight: 400;
+			text-align: center;
+			padding: 5px 14px;
+			border-radius: 100px;
+			background-color: #FF0B0B;
+			color: #fff;
+			margin-bottom: 14px;
+		}
+
+		.entry-title {
+			color: #04000B;
+			font-weight: 700;
+			@include textWithEllipsis(17, 1.4, 2);
+			margin-bottom: 0;
+
+			a {
+				color: inherit;
+				display: inline-block;
+			}
+		}
+	}
+}

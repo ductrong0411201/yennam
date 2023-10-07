@@ -1,0 +1,26 @@
+// Configuration
+@import "../scss/mixins-master";
+@import "../scss/fonts";
+@import "../scss/variables";
+@import "../scss/resets";
+@import "../scss/defaults";
+@import "../scss/wordpress-core";
+
+// Layout & components
+
+// v2
+@import "../scss/v2/header";
+@import "../scss/v2/slider";
+@import "../scss/v2/about";
+@import "../scss/v2/service";
+@import "../scss/v2/team";
+@import "../scss/v2/blog";
+@import "../scss/v2/advise";
+@import "../scss/v2/footer";
+
+// v1
+@import "../scss/content";
+@import "../scss/single";
+@import "../scss/sidebar";
+@import "../scss/contact";
+@import "../scss/archive";

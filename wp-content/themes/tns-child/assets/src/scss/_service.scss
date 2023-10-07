@@ -1,0 +1,246 @@
+.service-wrapper {
+	overflow: hidden;
+	padding-top: 50px;
+	padding-bottom: 70px;
+
+	.section-title {
+		text-align: center;
+		font-size: 17px;
+		font-weight: 700;
+		color: #292C2E;
+		text-transform: uppercase;
+		margin-bottom: 18px;
+		font-family: $secondary-font;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 900;
+		text-transform: uppercase;
+		color: #292C2E;
+		position: relative;
+		padding-bottom: 65px;
+		@include responsive(575) {
+			font-size: 25px;
+		}
+
+		&:before {
+			content: '';
+			width: 1px;
+			height: 52px;
+			display: block;
+			background-color: #FF0B0B;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			@include transform(translateX(-50%));
+		}
+	}
+
+	.service-slick-slider {
+		.slick-slide {
+			margin: 0 12px;
+		}
+
+		.slick-list {
+			margin: 0 -12px;
+		}
+
+		.slick-arrow {
+			width: 64px;
+			height: 64px;
+			border: .5px solid #D7D7D7;
+			background-color: #fff;
+			background-image: url("../images/arrow.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			font-size: 0;
+			border-radius: 5px;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			margin: 0;
+			padding: 0;
+			@include transform(translateY(-50%));
+			box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+			@include responsive(575) {
+				width: 40px;
+				height: 40px;
+			}
+
+			&.slick-prev {
+				left: -100px;
+				@include responsive(1499) {
+					left: -32px;
+				}
+				@include responsive(575) {
+					left: 5px;
+				}
+			}
+
+			&.slick-next {
+				right: -100px;
+				@include transform(translateY(-50%) rotate(180deg));
+				@include responsive(1499) {
+					right: -32px;
+				}
+				@include responsive(575) {
+					right: 5px;
+				}
+			}
+		}
+
+		.service-item-wrapper {
+			.service-item {
+				position: relative;
+				padding: 38px;
+				text-align: center;
+				min-height: 436px;
+				z-index: 1;
+
+				.icon {
+					margin-bottom: 25px;
+
+					img {
+						max-height: 56px;
+						max-width: 56px;
+						width: auto;
+						height: auto;
+						margin: 0 auto;
+					}
+				}
+
+				.service-title {
+					font-size: 20px;
+					font-weight: 700;
+					color: #292C2E;
+					font-family: $secondary-font;
+					margin-bottom: 20px;
+				}
+
+				.service-desc {
+					font-size: 17px;
+					font-weight: 400;
+					color: #787878;
+					margin-bottom: 15px;
+
+					p {
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.service-link {
+					font-size: 15px;
+					font-weight: 500;
+					color: #292C2E;
+					text-transform: uppercase;
+					display: inline-block;
+					position: relative;
+					padding: 15px 33px;
+
+					&:before, &:after {
+						display: inline-block;
+						height: 3px;
+						width: 51%;
+						content: '';
+						position: absolute;
+						bottom: 0;
+					}
+
+					&:before {
+						left: 0;
+						background-color: #292C2E;
+					}
+
+					&:after {
+						right: 0;
+						background-color: #FF0B0B;
+					}
+				}
+
+				&:hover {
+					&:before {
+						opacity: 0;
+					}
+
+					&:after {
+						opacity: 1;
+					}
+				}
+
+				&:before, &:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					@include transition(.3s all);
+					z-index: -1;
+				}
+
+				&:before {
+					border: 1px solid #D7D7D7;
+				}
+
+				&:after {
+					border: 5px solid #FF0B0B;
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.contact-wrapper {
+		margin-top: 60px;
+
+		.contact-desc {
+			text-align: center;
+			font-size: 17px;
+			font-weight: 400;
+			color: #292C2E;
+			margin-bottom: 37px;
+
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.contact-info {
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+
+			li {
+				margin: 0 10px;
+				@include transition(.3s all);
+
+				&:hover {
+					@include transform(translateY(-7px));
+				}
+
+				a {
+					@include flexbox();
+					@include align-items(center);
+					@include justify-content(center);
+					background-color: #FF0B0B;
+					border-radius: 66px;
+					width: 66px;
+					height: 66px;
+
+					img {
+						max-height: 27px;
+						max-width: 27px;
+						height: auto;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}

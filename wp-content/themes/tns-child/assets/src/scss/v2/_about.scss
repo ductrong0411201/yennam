@@ -1,0 +1,246 @@
+.about-wrapper-v2 {
+	position: relative;
+	z-index: 10;
+
+	.service-wrapper {
+		margin-top: -107px;
+
+		.service-item {
+			border-radius: 10px;
+			background-color: #CF0B0B;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+			padding: 25px;
+			min-height: 312px;
+			text-align: center;
+			@include responsive(991) {
+				margin-bottom: 30px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				width: 200px;
+				height: 200px;
+				display: block;
+				background-color: rgba(255, 255, 255, 0.15);
+				right: -55px;
+				bottom: -30px;
+				border-radius: 100px;
+			}
+
+			.icon {
+				text-align: center;
+				margin-bottom: 15px;
+
+				img {
+					max-width: 65px;
+					max-height: 65px;
+					width: auto;
+					height: auto;
+				}
+			}
+
+			.service-name {
+				text-align: center;
+				margin-bottom: 15px;
+				color: #fff;
+				font-family: $secondary-font;
+				font-size: 20px;
+				font-weight: 700;
+			}
+
+			.desc {
+				font-size: 17px;
+				font-weight: 400;
+				color: #fff;
+				margin-bottom: 15px;
+
+				p {
+					margin-bottom: 15px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.service-link-wrapper {
+				text-align: center;
+
+				.service-link {
+					font-size: 15px;
+					font-weight: 500;
+					color: #FFFFFF;
+					text-transform: uppercase;
+					display: inline-block;
+					position: relative;
+					padding: 15px 33px;
+
+					&:hover {
+						color: #d2d2d2;
+					}
+
+					&:before, &:after {
+						display: inline-block;
+						height: 3px;
+						width: 51%;
+						content: '';
+						position: absolute;
+						bottom: 0;
+					}
+
+					&:before {
+						left: 0;
+						background-color: #fff;
+					}
+
+					&:after {
+						right: 0;
+						background-color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	.about-container {
+		padding-top: 90px;
+		padding-bottom: 75px;
+		@include responsive(991) {
+			padding-top: 20px;
+		}
+
+		.about-content {
+			@include flexbox();
+			@include flex-wrap(wrap);
+
+			.about-left, .about-right {
+				@include flex-basis(50%);
+				max-width: 50%;
+				@include responsive(991) {
+					@include flex-basis(100%);
+					max-width: 100%;
+				}
+			}
+
+			.about-left {
+				padding-right: 120px;
+				position: relative;
+				@include responsive(991) {
+					padding-right: 0;
+					padding-bottom: 120px;
+				}
+
+				.logo-wrapper {
+					position: absolute;
+					width: 175px;
+					height: 175px;
+					border-radius: 175px;
+					background-color: #FFFFFF;
+					border: 10px solid #E6E6E6;
+					top: 50%;
+					right: - calc(175px/2);
+					@include transform(translateY(-50%));
+					@include flexbox();
+					@include align-items(center);
+					@include justify-content(center);
+					@include responsive(991) {
+						top: unset;
+						bottom: 0;
+						right: 50%;
+						@include transform(translate(50%, 50%));
+					}
+
+					img {
+						max-width: 100%;
+						max-height: 100%;
+						width: auto;
+						height: auto;
+					}
+				}
+
+				.about-title {
+					font-size: 17px;
+					text-transform: uppercase;
+					color: #292C2E;
+					font-weight: 700;
+					margin-bottom: 15px;
+					font-family: $secondary-font;
+				}
+
+				.about-subtitle {
+					font-weight: 900;
+					font-size: 30px;
+					text-transform: uppercase;
+					color: #FF0B0B;
+					border-bottom: 1px solid #D7D7D7;
+					padding-bottom: 20px;
+					margin-bottom: 30px;
+					@include responsive(1199) {
+						font-size: 25px;
+					}
+					@include responsive(575) {
+						font-size: 20px;
+					}
+				}
+
+				.about-desc {
+					p {
+						margin-bottom: 15px;
+					}
+
+					table {
+						border: 0;
+						margin-bottom: 15px;
+						word-break: inherit;
+
+						tbody, td {
+							border: 0;
+						}
+					}
+				}
+
+				.about-link {
+					font-size: 15px;
+					font-weight: 500;
+					color: #292C2E;
+					text-transform: uppercase;
+					display: inline-block;
+					position: relative;
+					padding: 15px 33px;
+
+					&:before, &:after {
+						display: inline-block;
+						height: 3px;
+						width: 51%;
+						content: '';
+						position: absolute;
+						bottom: 0;
+					}
+
+					&:before {
+						left: 0;
+						background-color: #292C2E;
+					}
+
+					&:after {
+						right: 0;
+						background-color: #FF0B0B;
+					}
+				}
+			}
+
+			.about-right {
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}

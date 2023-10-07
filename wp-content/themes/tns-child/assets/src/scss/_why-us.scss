@@ -1,0 +1,238 @@
+.why-us-wrapper {
+	padding-bottom: 80px;
+
+	.why-us-content {
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1;
+		padding-top: 115px;
+		padding-bottom: 300px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50px;
+			right: 50px;
+			bottom: 50px;
+			left: 50px;
+			border: 1px solid #FFFFFF;
+			display: block;
+			z-index: -1;
+			@include responsive(1199) {
+				top: 30px;
+				right: 30px;
+				bottom: 30px;
+				left: 30px;
+			}
+			@include responsive(991) {
+				top: 10px;
+				right: 10px;
+				bottom: 10px;
+				left: 10px;
+			}
+		}
+
+		.section-title {
+			text-align: center;
+			font-size: 17px;
+			font-weight: 700;
+			font-family: $secondary-font;
+			color: rgba(255, 255, 255, 0.8);
+			margin-bottom: 21px;
+			text-transform: uppercase;
+		}
+
+		.section-subtitle {
+			text-align: center;
+			font-size: 30px;
+			font-weight: 900;
+			color: rgba(255, 255, 255, 1);
+			margin-bottom: 80px;
+			text-transform: uppercase;
+			@include responsive(767) {
+				margin-bottom: 20px;
+				font-size: 25px;
+			}
+		}
+
+		.textbox-wrapper {
+			@include flexbox();
+			@include flex-wrap(wrap);
+
+			.textbox-item {
+				@include flex-basis(25%);
+				max-width: 25%;
+				border-right: 1px solid rgba(255, 255, 255, .4);
+				text-align: center;
+				padding: 22px 15px;
+				@include responsive(767) {
+					@include flex-basis(100%);
+					max-width: 100%;
+				}
+
+				&:last-child {
+					border-right: 0;
+				}
+
+				.text-1 {
+					font-size: 60px;
+					font-family: $secondary-font;
+					font-weight: 900;
+					color: #FF0B0B;
+					margin-bottom: 0;
+					@include responsive(1199) {
+						font-size: 40px;
+					}
+					@include responsive(991) {
+						font-size: 30px;
+					}
+				}
+
+				.text-2 {
+					font-size: 20px;
+					color: #fff;
+					font-weight: 400;
+					margin-bottom: 0;
+					@include responsive(1199) {
+						font-size: 18px;
+					}
+					@include responsive(991) {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.contact-wrapper {
+		margin-top: -215px;
+		position: relative;
+		z-index: 2;
+
+		.form-wrapper {
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0 3px 40px rgba(0, 0, 0, .1);
+			background-image: url("../images/form-bg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 80px 45px;
+			min-height: 851px;
+			@include responsive(767) {
+				padding: 50px 20px;
+				border-radius: 5px;
+				min-height: auto;
+			}
+
+			.form-title {
+				font-weight: 700;
+				font-size: 17px;
+				color: #292C2E;
+				font-family: $secondary-font;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+
+			.form-subtitle {
+				font-size: 30px;
+				font-weight: 900;
+				color: #292C2E;
+				text-transform: uppercase;
+				margin-bottom: 70px;
+				@include responsive(767) {
+					font-size: 25px;
+					margin-bottom: 30px;
+				}
+			}
+
+			.wpforms-container {
+				form {
+					.wpforms-field-container {
+						@include flexbox();
+						@include flex-wrap(wrap);
+						margin-right: -12px;
+						margin-left: -12px;
+
+						.wpforms-field {
+							@include flex-basis(50%);
+							max-width: 50%;
+							padding: 0 12px;
+							margin-bottom: 24px;
+							@include responsive(767) {
+								@include flex-basis(100%);
+								max-width: 100%;
+							}
+
+							&.wpforms-field-textarea {
+								@include flex-basis(100%);
+								max-width: 100%;
+							}
+
+							.wpforms-field-label {
+								display: none;
+							}
+
+							input[type=text], select, textarea {
+								width: 100%;
+								max-width: 100%;
+								background-color: rgba(239, 242, 245, 0.62);
+								border: 1px solid #D7D7D7;
+								font-size: 15px;
+								font-weight: 400;
+								color: #292C2E;
+								padding: 10px 25px;
+								height: 67px;
+								@include responsive(767) {
+									height: 49px;
+								}
+
+								&::-webkit-input-placeholder {
+									color: #787878
+								}
+
+								&:-ms-input-placeholder {
+									color: #787878
+								}
+
+								&::placeholder {
+									color: #787878
+								}
+							}
+
+							textarea {
+								height: 246px;
+								padding: 25px;
+								@include responsive(767) {
+									height: 150px;
+								}
+							}
+						}
+					}
+
+					.wpforms-submit-container {
+						padding: 0;
+
+						button[type=submit] {
+							width: 100%;
+							max-width: 100%;
+							height: 67px;
+							background-color: #FF0B0B;
+							border: 0;
+							font-size: 15px;
+							font-weight: 700;
+							color: #fff;
+							@include responsive(767) {
+								height: 49px;
+							}
+
+							&:hover {
+								background-color: #d00b0b;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
